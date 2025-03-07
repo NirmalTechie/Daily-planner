@@ -1,7 +1,7 @@
 <picture>
-    <source media="(prefers-color-scheme: light)" srcset="/docs/assets/img/logo-light.svg?sanitize=true" > 
-    <source media="(prefers-color-scheme: dark)" srcset="/docs/assets/img/logo-dark.svg?sanitize=true" > 
-    <img src="/docs/assets/img/logo-light.svg?sanitize=true" width="264px" alt="Hurl Logo">
+    <source media="(prefers-color-scheme: light)" srcset="https://hurl.dev/assets/img/logo-light.svg" > 
+    <source media="(prefers-color-scheme: dark)" srcset="https://hurl.dev/assets/img/logo-dark.svg" > 
+    <img src="https://hurl.dev/assets/img/logo-light.svg" width="264px" alt="Hurl Logo">
 </picture>
 
 [![deploy status](https://github.com/Orange-OpenSource/hurl/workflows/test/badge.svg)](https://github.com/Orange-OpenSource/hurl/actions)
@@ -47,7 +47,7 @@ Hurl can run HTTP requests but can also be used to <b>test HTTP responses</b>.
 Different types of queries and predicates are supported, from [XPath] and [JSONPath] on body response,
 to assert on status code and response headers.
 
-<a href="https://hurl.dev/player.html?id=starwars&speed=3"><img src="/docs/assets/img/poster-starwars.png" width="100%" alt="Hurl Demo"/></a>
+<a href="https://hurl.dev/player.html?id=starwars&speed=3"><img src="https://hurl.dev/assets/img/poster-starwars.png" width="100%" alt="Hurl Demo"/></a>
 
 
 It is well adapted for <b>REST / JSON APIs</b>
@@ -129,9 +129,9 @@ sha256 == hex,039058c6f2c0cb492c533b0a4d14ef77cc0f78abccced5287d84a1a2011cfb81;
 Finally, Hurl is easy to <b>integrate in CI/CD</b>, with text, JUnit, TAP and HTML reports
 
 <picture>
-    <source media="(prefers-color-scheme: light)" srcset="/docs/assets/img/home-waterfall-light.png">
-    <source media="(prefers-color-scheme: dark)" srcset="/docs/assets/img/home-waterfall-dark.png">
-    <img src="/docs/assets/img/home-waterfall-light.png" width="480" alt="HTML report"/>
+    <source media="(prefers-color-scheme: light)" srcset="https://hurl.dev/assets/img/home-waterfall-light.png">
+    <source media="(prefers-color-scheme: dark)" srcset="https://hurl.dev/assets/img/home-waterfall-dark.png">
+    <img src="https://hurl.dev/assets/img/home-waterfall-light.png" width="480" alt="HTML report"/>
 </picture>
 
 # Why Hurl?
@@ -1561,9 +1561,9 @@ Please follow the [contrib on Windows section].
 [GitHub]: https://github.com/Orange-OpenSource/hurl
 [libcurl]: https://curl.se/libcurl/
 [star Hurl on GitHub]: https://github.com/Orange-OpenSource/hurl/stargazers
-[HTML]: /docs/standalone/hurl-6.0.0.html
-[PDF]: /docs/standalone/hurl-6.0.0.pdf
-[Markdown]: /docs/standalone/hurl-6.0.0.md
+[HTML]: https://hurl.dev/assets/docs/hurl-6.0.0.html.gz
+[PDF]: https://hurl.dev/assets/docs/hurl-6.0.0.pdf.gz
+[Markdown]: https://hurl.dev/assets/docs/hurl-6.0.0.md.gz
 [JSON body]: https://hurl.dev/docs/request.html#json-body
 [XML body]: https://hurl.dev/docs/request.html#xml-body
 [XML multiline string body]: https://hurl.dev/docs/request.html#multiline-string-body

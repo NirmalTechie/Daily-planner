@@ -1,23 +1,58 @@
-[workspace]
-members = [
-    "packages/hurl",
-    "packages/hurlfmt",
-    "packages/hurl_core",
-]
-resolver = "2"
+[package]
+name = "hurl"
+version = "6.1.0-SNAPSHOT"
+authors = ["Fabrice Reix <fabrice.reix@orange.com>", "Jean-Christophe Amiel <jeanchristophe.amiel@orange.com>", "Filipe Pinto <filipe.pinto@orange.com>"]
+edition = "2021"
+license = "Apache-2.0"
+description = "Hurl, run and test HTTP requests"
+documentation = "https://hurl.dev"
+homepage = "https://hurl.dev"
+repository = "https://github.com/Orange-OpenSource/hurl"
+rust-version = "1.85.0"
 
-[profile.release]
-lto = true          # Enable Link Time Optimization
-codegen-units = 1   # Reduce number of codegen units to increase optimizations.
-panic = "abort"     # Abort on panic
-strip = true        # Automatically strip symbols from the binary.
+[lib]
+name = "hurl"
 
-# See https://rust-lang.github.io/rust-clippy/master/index.html
-[workspace.lints.rust]
-warnings = "deny"
+[features]
+# Re-export of curl/static-ssl: use a bundled OpenSSL version and statically link to it. Only applies on platforms that
+# use OpenSSL
+static-openssl = ["curl/static-ssl", "curl-sys/static-ssl"]
 
-[workspace.lints.clippy]
-empty_structs_with_brackets = "deny"
-manual_string_new = "deny"
-semicolon_if_nothing_returned = "deny"
-wildcard-imports = "deny"
+[dependencies]
+base64 = "0.22.1"
+brotli = "7.0.0"
+chrono = { version = "0.4.40", default-features = false, features = ["clock"] }
+clap = { version = "4.5.31", features = ["string", "wrap_help"] }
+curl = "0.4.47"
+curl-sys = "0.4.80"
+encoding = "0.2.33"
+glob = "0.3.2"
+hex = "0.4.3"
+hurl_core = { version = "6.1.0-SNAPSHOT", path = "../hurl_core" }
+libflate = "2.1.0"
+libxml = "0.3.3"
+md5 = "0.7.0"
+percent-encoding = "2.3.1"
+regex = "1.11.1"
+serde = { version = "1.0.218", features = ["derive"] }
+serde_json = { version = "1.0.140", features = ["arbitrary_precision"] }
+sha2 = "0.10.8"
+url = "2.5.4"
+xml-rs = { version = "0.8.25" }
+lazy_static = "1.5.0"
+# uuid features: lets you generate random UUIDs and use a faster (but still sufficiently random) RNG
+uuid = { version = "1.15.1", features = ["v4" , "fast-rng"] }
+similar = "2.7.0"
+terminal_size = "0.4.1"
+
+[target.'cfg(unix)'.dependencies]
+termion = "4.0.4"
+
+[target.'cfg(windows)'.build-dependencies]
+winres = "0.1.12"
+
+[build-dependencies]
+cc = "1.2.16"
+
+[lints]
+workspace = true
