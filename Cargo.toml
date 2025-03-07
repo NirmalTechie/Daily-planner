@@ -1,0 +1,23 @@
+[workspace]
+members = [
+    "packages/hurl",
+    "packages/hurlfmt",
+    "packages/hurl_core",
+]
+resolver = "2"
+
+[profile.release]
+lto = true          # Enable Link Time Optimization
+codegen-units = 1   # Reduce number of codegen units to increase optimizations.
+panic = "abort"     # Abort on panic
+strip = true        # Automatically strip symbols from the binary.
+
+# See https://rust-lang.github.io/rust-clippy/master/index.html
+[workspace.lints.rust]
+warnings = "deny"
+
+[workspace.lints.clippy]
+empty_structs_with_brackets = "deny"
+manual_string_new = "deny"
+semicolon_if_nothing_returned = "deny"
+wildcard-imports = "deny"
