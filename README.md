@@ -122,6 +122,9 @@ And check response bytes
 ```hurl
 GET https://example.org/data.tar.gz
 HTTP 200
+
+
+
 [Asserts]
 sha256 == hex,039058c6f2c0cb492c533b0a4d14ef77cc0f78abccced5287d84a1a2011cfb81;
 ```
