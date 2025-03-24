@@ -208,6 +208,7 @@ HTTP 200
         * [HTML Report](#html-report)
         * [JSON Report](#json-report)
         * [JUnit Report](#junit-report)
+        * 
         * [TAP Report](#tap-report)
         * [JSON Output](#json-output)
     * [Others](#others)
