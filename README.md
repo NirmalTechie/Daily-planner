@@ -1,3 +1,6 @@
+
+
+
 <picture>
     <source media="(prefers-color-scheme: light)" srcset="https://hurl.dev/assets/img/logo-light.svg" > 
     <img src="https://hurl.dev/assets/img/logo-light.svg" width="264px" alt="Hurl Logo">
